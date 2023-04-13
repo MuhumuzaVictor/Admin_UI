@@ -1,0 +1,201 @@
+        .flex-container {
+            /* width: 85%; */
+            padding: 10px;
+            margin: auto;
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(45, 164, 78, 0.3);
+        }
+        
+        .flex-container .flex-container-line {
+            display: flex;
+        }
+        
+        .flex-item-1 {
+            width: 60%;
+            height: fit-content;
+            padding: 10px;
+            margin: 20px;
+            background-color: #F6F8FA;
+            border: solid 1px;
+            border-color: #2DA44E;
+            margin-left: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 10px rgba(45, 164, 78, 0.2);
+        }
+        
+        .flex-item-2 {
+            width: 60%;
+            padding: 10px;
+            margin: 20px;
+            background-color: #F6F8FA;
+            border: solid 1px;
+            border-color: #2DA44E;
+            margin-left: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 10px rgba(45, 164, 78, 0.2);
+        }
+        
+        .checkbox {
+            display: inline-block;
+            vertical-align: middle;
+            transform: scale(1.8);
+            /* Change the scale factor as needed */
+            /* margin-right: 10px; */
+        }
+        
+        label {
+            margin-right: 10px;
+        }
+        
+        table {
+            margin: 0 auto;
+            font-family: 'Karla', sans-serif;
+            text-align: right;
+        }
+        
+        table td:nth-child(2) {
+            text-align: left;
+            padding: 8px;
+        }
+        
+        table td {
+            padding: 8px;
+        }
+        
+        table td span {
+            font-weight: 600;
+        }
+        
+        table td,
+        table input {
+            font-size: 18px;
+            /* adjust the value as needed */
+        }
+        
+        .checkbox,
+        label {
+            display: inline-block;
+            vertical-align: middle;
+            font-weight: 400;
+        }
+        
+        .checkbox {
+            accent-color: #2DA44E;
+            border-radius: 1px;
+        }
+        
+        input[type="text"] {
+            border-style: solid;
+            border-color: #2DA44E;
+            width: 280px;
+            border-radius: 30px;
+            font-size: 14pt;
+            padding-left: 15px;
+        }
+        
+        input[type="text"]:focus {
+            outline: none;
+            border: 2px solid #2DA44E;
+            box-shadow: 0px 0px 5px #2DA44E;
+            font-size: 14pt;
+            font-weight: 400;
+        }
+        
+        .button {
+            background-color: #2DA44E;
+            /* Green */
+            border: none;
+            border-radius: 30px;
+            color: white;
+            padding: 8px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            font-weight: 400;
+        }
+        
+        .button:hover {
+            box-shadow: 0px 0px 5px #2DA44E;
+        }
+        
+        #raw {
+            font-size: 12pt;
+            font-family: 'Karla', sans-serif;
+            font-weight: 400;
+            text-decoration: underline;
+            margin-left: 80px;
+        }
+        
+        .button-2 {
+            background-color: #2DA44E;
+            /* Green */
+            border: none;
+            border-radius: 30px;
+            color: white;
+            padding: 8px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            margin-left: 180px;
+            cursor: pointer;
+            font-weight: 400;
+        }
+        
+        .button-2:hover {
+            box-shadow: 0px 0px 5px #2DA44E;
+        }
+        
+        p {
+            display: inline-block;
+        }
+        
+        .flex-container #summary {
+            font-family: 'Karla', sans-serif;
+            font-size: 20pt;
+            font-weight: 700;
+            margin-left: 370px;
+            margin-top: 2px;
+            margin-bottom: -5px;
+        }
+        
+        .flex-container #details {
+            font-family: 'Karla', sans-serif;
+            font-size: 20pt;
+            font-weight: 700;
+            margin-left: 180px;
+            margin-top: 2px;
+            margin-bottom: -5px;
+        }
+        
+        table .val {
+            border-radius: 10px;
+            padding: 10px;
+            padding-left: 0px;
+            /* text-align: right; */
+        }
+        
+        table .val {
+            border: 1px solid #2DA44E;
+        }
+        
+        table .val div {
+            padding: 6px;
+        }
+        
+        table .val span {
+            padding: 3px;
+            background-color: #2DA44E;
+            font-size: 12pt;
+            border-radius: 10px;
+            margin-left: 10px;
+            color: white;
+            padding: 4px;
+        }
