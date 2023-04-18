@@ -1,0 +1,155 @@
+/* .week-days {
+    align-content: center;
+    border: 1px solid #ccc;
+    background: #fff;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 10px;
+}
+
+.week-days span {
+    padding: auto;
+} */
+
+.content {
+    padding: 20px 0px;
+    background-color: #F6F8FA;
+    border: none;
+}
+
+.week-days {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    box-shadow: 0 10px 10px rgba(45, 164, 78, 0.2);
+    background: #fff;
+    font-size: 16px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.week-days span {
+    flex-basis: calc(100% / 6);
+    text-align: center;
+}
+
+.meals-today {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border: none;
+    box-shadow: 0 10px 10px rgba(45, 164, 78, 0.2);
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.meals-today p {
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.meals-today span {
+    float: right;
+    font-size: 16px;
+    font-weight: 500;
+    position: inherit;
+}
+
+.meals-today .breakfast {
+    margin-top: 5px;
+    border-bottom: 1px solid #CCCCCC;
+    background: #fff;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.breakfast img,
+.breakfast .breakfast-text,
+.breakfast {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.breakfast img {
+    border-radius: 50%;
+    margin: 20px;
+    margin-right: 60px;
+    height: 100px;
+    width: 100px;
+}
+
+.breakfast {
+    display: flex;
+    justify-content: space-between;
+    padding: auto;
+}
+
+.breakfast-text {
+    margin: auto;
+    margin-left: 20px;
+}
+
+.breakfast-text p {
+    font-weight: 600;
+}
+
+.breakfast-text .breakfast-text-2 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.breakfast-text span {
+    float: none;
+    border: 1px solid #2DA44E;
+    border-radius: 30px;
+    margin-left: 4px;
+    padding: 3px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.breakfast-text span:hover {
+    box-shadow: 0px 0px 5px #2DA44E;
+    background-color: #2DA44E;
+    color: #fff;
+}
+
+.breakfast-buttons {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-right: 20px;
+}
+
+.breakfast-buttons .btn {
+    background-color: #2DA44E;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.breakfast-buttons .btn:hover {
+    box-shadow: 0px 0px 5px #2DA44E;
+    border: 1px solid #2DA44E;
+    background-color: #fff;
+    color: #2DA44E;
+}

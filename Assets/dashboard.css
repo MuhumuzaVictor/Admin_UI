@@ -1,0 +1,788 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+html {
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+@media only screen and (min-width: 720px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 1240px) {
+    html {
+        font-size: 24px;
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "header header" "navbar content";
+    grid-template-columns: 1fr 4fr;
+    width: 100%;
+    height: 100vh;
+}
+
+.title {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.active {
+    font-weight: 600;
+    color: #000;
+}
+
+.health-card h5 {
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+    color: #797676;
+    padding: 5px;
+}
+
+.meal-card h5 {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #797676;
+    padding: 5px;
+}
+
+.calories-card h5 {
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: 500;
+    color: #797676;
+    padding: 5px;
+}
+
+.calories-card p {
+    font-size: 500;
+    font-size: 0.6rem;
+    text-align: center;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.calories-card span {
+    font-weight: 300;
+    color: #333;
+}
+
+.card-top {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* border-radius: 10px; */
+    background: #fff;
+}
+
+.card-top p {
+    font-size: 0.6rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.card-top span {
+    font-weight: 300;
+    color: #333;
+}
+
+.card-bottom {
+    /* border: 1px solid #ccc; */
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.card-bottom .bmi {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+}
+
+.card-bottom .unit {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: center;
+    color: #333;
+}
+
+nav,
+main {
+    border: 0.5px solid #f0efef;
+    border-bottom: none;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 60px;
+}
+
+nav {
+    grid-area: navbar;
+    height: 100vh;
+    border-right: none;
+}
+
+main {
+    grid-area: content;
+    height: 100vh;
+    border-right: none;
+}
+
+.fa-house-user {
+    font-weight: bold;
+    color: #000;
+}
+
+ul {
+    list-style: none;
+    padding-left: 40px;
+    padding-top: 20px;
+    margin-top: 30px;
+}
+
+ul li {
+    margin-bottom: 50px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #363636;
+    font-size: 0.6rem;
+    padding: 10px;
+    border-radius: 999px;
+}
+
+ul i {
+    margin-right: 20px;
+    color: #5f5d5d;
+    font-size: 0.8rem;
+}
+
+ul li a:hover {
+    background: #e0e7ee;
+    border-radius: 9999px;
+    cursor: default;
+    padding: 10px;
+    width: 80%;
+}
+
+.profile-image {
+    border-radius: 50%;
+    background-image: url(../Assets/avatar.jpg);
+    height: 40px;
+    width: 40px;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    right: 125px;
+    top: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.username {
+    position: absolute;
+    right: 0;
+    top: 18px;
+    white-space: nowrap;
+    width: 119px;
+    height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.5rem;
+}
+
+#settings-icon {
+    position: absolute;
+    color: #5f5d5d;
+    top: 59px;
+    right: 130px;
+    font-size: 18px;
+}
+
+.setting-text {
+    margin-left: -20px;
+}
+
+.log-out-text {
+    margin-left: -20px;
+}
+
+#user-icon {
+    position: absolute;
+    color: #5f5d5d;
+    top: 11px;
+    right: 130px;
+    font-size: 18px;
+}
+
+#sun-icon {
+    position: absolute;
+    color: #5f5d5d;
+    top: 104px;
+    right: 130px;
+    font-size: 18px;
+}
+
+#logout-icon {
+    position: absolute;
+    color: #5f5d5d;
+    top: 151px;
+    right: 130px;
+    font-size: 18px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0;
+    top: 62px;
+    border-radius: 10px;
+    border: none;
+}
+
+.dropdown-content a {
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.dropdown-content a:hover {
+    background: #e0e7ee;
+}
+
+.user {
+    border-bottom: 1px solid #d6d4d4;
+}
+
+.settings-item {
+    border-bottom: 1px solid #d6d4d4;
+}
+
+.light-mode-item {
+    border-bottom: 1px solid #d6d4d4;
+}
+
+.show {
+    display: block;
+}
+
+.counter {
+    position: absolute;
+    border: none;
+    outline: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    text-align: center;
+    background-color: red;
+    color: #fff;
+    right: 210px;
+    font-size: 13px;
+    top: 10px;
+}
+
+.header-template {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 60px;
+    width: 100%;
+}
+
+.profile-skeleton {
+    height: 40px;
+    width: 40px;
+    animation: skeleton-loading 1s infinite alternate;
+    border-radius: 50%;
+    position: absolute;
+    right: 125px;
+    top: 10px;
+    outline: none;
+    border: none;
+}
+
+.profile-text {
+    height: 0.5rem;
+    animation: skeleton-loading 1s infinite alternate;
+    border-radius: 0.125rem;
+    position: absolute;
+    right: 4px;
+    top: 20px;
+    width: 110px;
+    height: 0.5rem;
+}
+
+.notification-skeleton {
+    position: absolute;
+    right: 207px;
+    top: 10px;
+    font-size: 28px;
+    height: 40px;
+    width: 40px;
+    animation: skeleton-loading 1s infinite alternate;
+}
+
+.container-template {
+    display: flex;
+    background-color: hsl(200, 20%, 95%);
+    animation: skeleton-loading 1s infinite alternate;
+    height: 100vh;
+}
+
+.logo-skeleton {
+    height: 50px;
+    position: absolute;
+    left: 0px;
+    top: 5px;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: hsl(200, 20%, 70%);
+    }
+    100% {
+        background-color: hsl(200, 20%, 95%);
+    }
+}
+
+.logo {
+    position: absolute;
+    left: 30px;
+    top: 5px;
+}
+
+main section {
+    height: 600px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.summary {
+    display: flex;
+    margin: 30px 40px 10px 40px;
+    height: 290px;
+}
+
+.health-card {
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    width: 30%;
+}
+
+.bmi-status {
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    width: 30%;
+    margin-left: 10px;
+}
+
+th {
+    font-size: 0.79rem;
+    font-weight: 500;
+    text-align: center;
+    color: #797676;
+}
+
+td {
+    padding: 12px;
+    font-size: 0.6rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.calories-card {
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    width: 40%;
+    margin-left: 10px;
+}
+
+.meal-card {
+    border: 1px solid #ccc;
+    background: #fff;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.meal-card-btn {
+    display: flex;
+    flex-direction: column;
+}
+
+.meal-card-btn button {
+    margin: 10px;
+    padding: 8px;
+    border-radius: 999px;
+    border: none;
+    outline: none;
+    background: #2da44e;
+    color: #fff;
+}
+
+.meal-container-inner {
+    display: flex;
+    justify-content: space-around;
+}
+
+.image-left {
+    display: flex;
+}
+
+figcaption {
+    margin-top: 50px;
+    margin-left: 20px;
+    font-weight: 300;
+    font-size: 0.7rem;
+}
+
+.meal-photo {
+    width: 230px;
+    height: 180px;
+    background-image: url(./breakfast.jpeg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    opacity: 0.85;
+}
+
+.vertical-line-left {
+    border: 0.5px solid #e4e2e2;
+    position: absolute;
+    height: 70%;
+    left: 190px;
+    border-left: none;
+    top: 10px;
+}
+
+.health-card-inner {
+    height: 250px;
+}
+
+.vertical-line-right {
+    border: 0.5px solid #e4e2e2;
+    position: absolute;
+    height: 70%;
+    right: 190px;
+    border-left: none;
+    top: 10px;
+}
+
+header i {
+    position: absolute;
+    right: 207px;
+    top: 19px;
+    font-size: 28px;
+}
+
+.preloader {
+    background: #fff;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    position: fixed;
+}
+
+.loader {
+    border: solid 3px #99cdee;
+    border-bottom-color: #1c87c9;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: 0.5s linear infinite spinner;
+}
+
+@keyframes spinner {
+    0% {
+        transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    }
+    100% {
+        transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    }
+}
+
+@media only screen and (min-width: 908px) {
+    .meal-card-btn-set2 {
+        display: none;
+    }
+    .figcaption-set2 {
+        display: none;
+    }
+    .footer-nav {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 908px) {
+    .nav-label {
+        display: none;
+    }
+    .figcaption-set2 {
+        font-size: 0.7rem;
+        padding: 10px;
+    }
+    .meal-card {
+        margin-left: 0px;
+        margin-right: 0;
+        /* margin-top: 3px; */
+        /* border: 1px solid red; */
+        padding: 0;
+        margin-bottom: 2px;
+        width: 100%;
+    }
+    figcaption {
+        margin-top: 0;
+        margin-left: 0;
+    }
+    .meal-container-inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .meal-card-btn {
+        display: none;
+    }
+    .image-left {
+        display: unset;
+    }
+    .meal-card-btn-set2 {
+        display: block;
+        margin: 10px;
+    }
+    .meal-card-btn-set2 button {
+        border-radius: 999px;
+        padding: 5px;
+        border: none;
+        outline: none;
+        background: #2da44e;
+        color: #fff;
+        font-size: 0.6rem;
+    }
+    figcaption {
+        display: none;
+    }
+    .meal-photo {
+        width: 160px;
+        height: 160px;
+        background-image: url(./breakfast.jpeg);
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+    }
+    .summary {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: -43px 40px 10px 40px;
+        height: 950px;
+        width: 100%;
+        /* border: 1px solid red; */
+    }
+    .health-card {
+        border: 1px solid #ccc;
+        width: 100%;
+        margin: 10px;
+        height: 270px;
+        background: #fff;
+    }
+    .bmi-status {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #ccc;
+        background: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        width: 100%;
+        width: 100%;
+        margin-left: 0px;
+        margin: 10px;
+    }
+    .calories-card {
+        width: 100%;
+        margin-left: 0;
+    }
+    nav {
+        overflow: hidden;
+    }
+    main {
+        border-left: 0;
+        margin-right: 5px;
+        border-right: none;
+        height: 1040px;
+    }
+    body {
+        display: grid;
+        grid-template-areas: "header header" "navbar content";
+        grid-template-columns: 0.1fr 4fr;
+        width: 100%;
+        height: 100vh;
+    }
+    ul i {
+        margin-right: 10px;
+        margin-left: 0;
+        color: #5f5d5d;
+        font-size: 1rem;
+    }
+    ul li {
+        margin: 0px;
+        padding: 10px;
+    }
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1245px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-bottom: 50px;
+        padding-top: 30px;
+    }
+    .logo {
+        position: absolute;
+        left: 3px;
+        top: 6px;
+        width: 100px;
+    }
+    .vertical-line-left {
+        border: 1px solid #f5f5f5;
+        position: absolute;
+        height: 70%;
+        left: 120px;
+        border-left: none;
+        top: 10px;
+    }
+    header i {
+        position: absolute;
+        right: 97px;
+        top: 22px;
+        font-size: 1.3rem;
+    }
+    .counter {
+        position: absolute;
+        border: none;
+        outline: none;
+        height: 18px;
+        width: 18px;
+        border-radius: 100%;
+        text-align: center;
+        background-color: red;
+        color: #fff;
+        right: 98px;
+        font-size: 13px;
+        top: 12px;
+    }
+    .title {
+        margin-top: 18px;
+    }
+    .vertical-line-right {
+        display: none;
+    }
+    .footer-nav {
+        border-top: 1px solid #f5f5f5;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        position: fixed;
+        background: #fff;
+        height: 60px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 54px;
+    }
+    .footer-nav a {
+        color: #5f5d5d;
+        font-size: 1.3rem;
+    }
+    .mobile-logout {
+        margin-right: 30px;
+    }
+    .fa-gear {
+        position: absolute;
+        top: 17px;
+        right: 109px;
+        font-size: 1.5rem;
+    }
+    .username {
+        display: none;
+    }
+    .profile-image {
+        right: 10px;
+        top: 10px;
+    }
+    .logo-skeleton {
+        width: 120px;
+        height: 40px;
+        position: absolute;
+        left: -5px;
+        top: 5px;
+    }
+    .notification-skeleton {
+        position: absolute;
+        right: 186px;
+        top: 10px;
+        font-size: 28px;
+        height: 40px;
+        width: 40px;
+        animation: skeleton-loading 1s infinite alternate;
+    }
+}
