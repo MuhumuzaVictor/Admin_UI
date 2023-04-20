@@ -27,13 +27,37 @@
     font-size: 16px;
     margin-left: 40px;
     margin-right: 40px;
-    padding: 10px;
+    padding: 16px;
     border-radius: 10px;
 }
 
-.week-days span {
+.week-days a {
     flex-basis: calc(100% / 6);
     text-align: center;
+    padding: 6px;
+}
+
+.week-days a {
+    text-decoration-line: none;
+    color: #363636;
+}
+
+.week-days a:first-child span {
+    background: #e0e7ee;
+    border-radius: 9999px;
+    cursor: default;
+    padding: 5px 14px;
+}
+
+.week-days a span:active {
+    color: black;
+}
+
+.week-days span:hover {
+    background: #e0e7ee;
+    border-radius: 9999px;
+    cursor: default;
+    padding: 5px 14px;
 }
 
 .meals-today {
