@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Assets/dashboard.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="foodvalues.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="./Assets/SUPA meal planner - Copy.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <meta name="description" content="intellieals is a web based application that offers you food suggestions,timely reminders and nutrition literature." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="intelliMeals" />
+    <meta property="og:description" content="intellieals is a web based application that offers you food suggestions,timely reminders and nutrition literature." />
+    <meta property="og:url" content="https://intelli-meals-deploy.vercel.app /" />
+    <meta property="og:image" content="https://intelli-meals-deploy.vercel.app/Assets/restaurantchef.jpg" />
+
+    <title>Admin_Dashboard</title>
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="header-template">
+            <img class="logo-skeleton" src="./Assets/SUPA meal planner - Copy.svg" alt="intelliMeals logo" width="140px" />
+            <div class="profile-skeleton"></div>
+            <div class="profile-text"></div>
+            <div class="notification-skeleton"></div>
+        </div>
+
+        <div class="container-template"></div>
+    </div>
+    <header>
+        <img class="logo" src="./Assets/SUPA meal planner - Copy.svg" alt="intelliMeals logo" width="110px" />
+        <div class="vertical-line-left"></div>
+
+        <h4 class="title">Food Values</h4>
+        <i class="fa-sharp fa-regular fa-bell"></i>
+        <div class="counter"><span>2</span></div>
+        <div class="vertical-line-right"></div>
+        <div class="username">SIMON PETER WAKOKO</div>
+
+        <button onclick="myFunction()" class="profile-image"></button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="#user_profile" class="user"><i class="fa-regular fa-user" id="user-icon"></i>User profile</a
+        >
+        <a href="#settings" class="settings-item"
+          ><i class="fa-solid fa-gear" id="settings-icon"></i
+          ><span class="setting-text">Settings</span>
+        </a>
+            <a href="dashboard_darkmode.html" class="light-mode-item"><i class="fa-regular fa-moon" id="sun-icon"></i>
+          <span class="light-mode-text">Dark Mode</span>
+        </a>
+            <a href="index.html"><i class="fa-solid fa-right-from-bracket" id="logout-icon"></i
+          ><span class="log-out-text">Log out</span>
+        </a>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="dashboard.html" class="active"><i class="fa-solid fa-house-user"></i
+            ><span class="nav-label">Home</span>
+          </a>
+            </li>
+            <li>
+                <a href="#"><i class="fa-solid fa-calendar-check"></i
+            ><span class="nav-label">Meal Plan</span>
+          </a>
+            </li>
+            <li>
+                <a href="#"><i class="fa-solid fa-clock-rotate-left"></i
+            ><span class="nav-label">History</span>
+          </a>
+            </li>
+            <li>
+                <a href="#"><i class="fa-solid fa-magnifying-glass-chart"></i
+            ><span class="nav-label">Food Analysis</span>
+          </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="flex-container">
+            <p id="details">Food Details</p>
+            <p id="summary">Summary</p>
+            <div class="flex-container-line">
+
+                <div class="flex-item-1">
+                    <form>
+                        <table>
+                            <tr>
+                                <td>
+                                    <span>Name:</span>
+                                </td>
+                                <td>
+                                    <input type="text" name="fname" value="beans">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>Api val:</span>
+                                </td>
+                                <td>
+                                    <input type="text" name="api_val" value="beans">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>Category:</span>
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="checkbox" name="category1" value="breakfast">
+                                    <label for="category1">Breakfast</label>
+                                    <input type="checkbox" class="checkbox" name="category2" value="lunch" checked="checked">
+                                    <label for="category2">Lunch</label>
+                                    <input type="checkbox" class="checkbox" name="category3" value="dinner" checked="checked">
+                                    <label for="category3">Dinner</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>Part:</span>
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="checkbox" name="part1" value="main">
+                                    <label for="part1">Main</label>
+                                    <input type="checkbox" class="checkbox" name="part2" value="sauce" checked="checked">
+                                    <label for="part2">Sauce</label>
+                                    <input type="checkbox" class="checkbox" name="part3" value="side" checked="checked">
+                                    <label for="part3">Side</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>Nutrients:</span>
+                                </td>
+                                <td>
+                                    <input type="button" class="button" value="Send Request">
+                                    <input type="button" class="button" value="Request 1">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+
+                <div class="flex-item-2">
+                    <table>
+                        <tr>
+                            <td>
+                                <span>Name:</span>
+                            </td>
+                            <td>
+                                <input type="text" name="fname" value="beans">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <span>Category:</span>
+                            </td>
+                            <td>
+                                <input type="checkbox" class="checkbox" name="category1" value="breakfast">
+                                <label for="category1">Breakfast</label>
+                                <input type="checkbox" class="checkbox" name="category2" value="lunch" checked="checked">
+                                <label for="category2">Lunch</label>
+                                <input type="checkbox" class="checkbox" name="category3" value="dinner" checked="checked">
+                                <label for="category3">Dinner</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>Part:</span>
+                            </td>
+                            <td>
+                                <input type="checkbox" class="checkbox" name="part1" value="main">
+                                <label for="part1">Main</label>
+                                <input type="checkbox" class="checkbox" name="part2" value="sauce" checked="checked">
+                                <label for="part2">Sauce</label>
+                                <input type="checkbox" class="checkbox" name="part3" value="side" checked="checked">
+                                <label for="part3">Side</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>Nutrients:</span>
+                            </td>
+                            <td>
+                                <div class="val">
+                                    <div>Calories:<span>123</span></div>
+                                    <div>Proteins:<span>123</span></div>
+                                    <div>Fat:<span>123</span></div>
+                                    <div>Carbohydrates:<span>123</span></div>
+                                    <div>Fibre:<span>123</span></div>
+                                </div>
+                                <!-- <table id="val" border="1">
+                                <tr id="first">
+                                    <td>Calories:</td>
+                                    <td><span>123</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Proteins:</td>
+                                    <td><span>123</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Fat:</td>
+                                    <td><span>123</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Carbohydrates:</td>
+                                    <td><span>123</span></td>
+                                </tr>
+                                <tr id="last">
+                                    <td>Fibre:</td>
+                                    <td><span>123</span></td>
+                                </tr>
+                            </table> -->
+                                <span id="raw">view raw form</span>
+                            </td>
+                        </tr>
+                    </table>
+                    <input type="button" class="button-2" value="Save Data">
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <div class="footer-nav">
+        <a href="dashboard.html" class="active"><i class="fa-solid fa-house-user"></i>
+      </a>
+
+        <a href="#"><i class="fa-solid fa-calendar-check"></i> </a>
+
+        <a href="#"><i class="fa-solid fa-clock-rotate-left"></i> </a>
+
+        <a href="#"><i class="fa-solid fa-magnifying-glass-chart"></i> </a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById("myChart");
+
+        new Chart(ctx, {
+            type: "pie",
+            data: {
+                labels: ["Proteins", "Carbohydrates", "Fats", "Vitamins"],
+                datasets: [{
+                    label: "Calories",
+                    data: [60, 112, 120, 400],
+                    backgroundColor: ["#eb966b", "#f6da6a", "#4aad4e", "#d53433"],
+                    borderWidth: 1,
+                }, ],
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                    },
+                },
+            },
+        });
+
+        /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches(".profile-image")) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains("show")) {
+                        openDropdown.classList.remove("show");
+                    }
+                }
+            }
+        };
+    </script>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
