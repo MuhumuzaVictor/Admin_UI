@@ -139,14 +139,18 @@ main {
 }
 
 header {
+    position: sticky;
+    top: 0px;
     grid-area: header;
     display: flex;
     justify-content: center;
-    position: relative;
     height: 60px;
 }
 
 nav {
+    position: fixed;
+    left: 0;
+    margin-top:60px;
     grid-area: navbar;
     height: 100vh;
     border-right: none;
