@@ -242,6 +242,7 @@
 /* end of about food css for food benefits */
 
 /* about food css for Nutritional content*/
+
 .About-headings-1 {
     display: flex;
     justify-content: center;
@@ -353,9 +354,3 @@ table td{
 .about-nutritional-content-2 table:last-child{
     margin-bottom: 20px;
 }
-
-
-
-
-
-
