@@ -142,7 +142,6 @@
                                 </tr>
                             </table>
                     </div>
-                    
                     </div>
                     <div id="healthBenefits" class="About-food-info" style="display:none">
                         <p>Brown coffee</p>
@@ -166,30 +165,8 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        const ctx = document.getElementById("myChart");
-
-        new Chart(ctx, {
-            type: "pie",
-            data: {
-                labels: ["Proteins", "Carbohydrates", "Fats", "Vitamins"],
-                datasets: [{
-                    label: "Calories",
-                    data: [60, 112, 120, 400],
-                    backgroundColor: ["#eb966b", "#f6da6a", "#4aad4e", "#d53433"],
-                    borderWidth: 1,
-                }, ],
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                    },
-                },
-            },
-        });
-
-        /* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
+ 
+        /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
         function myFunction() {
             document.getElementById("myDropdown").classList.toggle("show");
         }
@@ -208,30 +185,26 @@ toggle between hiding and showing the dropdown content */
             }
         };
 
-        //This function toggles the views between nutrition information and Health Benefits
+        // ###################################
+        // This function toggles the views between nutrition information and Health Benefits
+        // ###################################
+        var nutrients= document.getElementById('nutrients');
+        var healthBenefits = document.getElementById('healthBenefits');
+        
+        //function to toggle nutrients
         function toggleNutrients() {
-  var nutrients= document.getElementById('nutrients');
-  var healthBenefits = document.getElementById('healthBenefits');
-
-  if (nutrients.style.display === 'none') {
-    nutrients.style.display = 'block';
-    healthBenefits.style.display = 'none';
-  } 
-//   else {
-//     nutrients.style.display = 'none';
-//     healthBenefits.style.display = 'block';
-//   }
-}
-
-function toggleHealthBenefits() {
-  var nutrients= document.getElementById('nutrients');
-  var healthBenefits = document.getElementById('healthBenefits');
-
-  if (healthBenefits.style.display === 'none') {
-    nutrients.style.display = 'none';
-  healthBenefits.style.display = 'block';
-  }
-}
+            if (nutrients.style.display === 'none') {
+                nutrients.style.display = 'block';
+                healthBenefits.style.display = 'none';
+            } 
+        }
+        // Function to toggle Health Benefits
+        function toggleHealthBenefits() {
+        if (healthBenefits.style.display === 'none') {
+            nutrients.style.display = 'none';
+        healthBenefits.style.display = 'block';
+        }
+        }
     </script>
     <script src="dashboard.js"></script>
 </body>
