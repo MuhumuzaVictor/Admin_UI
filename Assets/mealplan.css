@@ -276,7 +276,7 @@
 
 /* first nutrtional content table */
 
-.about-nutritional-content-1{
+.about-nutritional-content-1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -351,6 +351,7 @@ table td{
     font-weight: 700;  
     
 }
+
 .about-nutritional-content-2 table:last-child{
     margin-bottom: 20px;
 }
