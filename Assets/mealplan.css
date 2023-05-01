@@ -250,24 +250,31 @@
     align-items: center;
 }
 
-.About-headings-1 a {
+.About-headings-1 button {
     margin-top: 20px;
     margin-left:  10px;
     margin-right:  10px;
-}
-.About-headings-1 a:first-child{
+    background-color: #2DA44E;
+    color: #fff;
+    border: none;
     font-family: 'Karla', sans-serif;
-    font-size: 22px;
-    font-weight: 500;
-    text-decoration: underline;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 400;
+    border-radius: 30px;
+    padding: 5px 14px;
+}
+.About-headings-1 button:hover{
+     box-shadow: 0px 0px 5px #2DA44E;
+    border: 1px solid #2DA44E;
+    background-color: #fff;
     color: #2DA44E;
 }
-.About-headings-1 a:last-child{
-    font-family: 'Karla', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    text-decoration: none;
-    color: black;
+.About-headings-1 button:focus{
+     box-shadow: 0px 0px 5px #2DA44E;
+    border: 1px solid #2DA44E;
+    background-color: #fff;
+    color: #2DA44E;
 }
 .about-nutritional-content{
     border: 1px solid #2DA44E;
