@@ -141,6 +141,7 @@ main {
 header {
     position: sticky;
     top: 0px;
+    z-index: 2;
     grid-area: header;
     display: flex;
     justify-content: center;
@@ -276,7 +277,6 @@ ul li a:hover {
     min-width: 160px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
     right: 0;
     top: 62px;
     border-radius: 10px;
@@ -292,6 +292,7 @@ ul li a:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    
 }
 
 .dropdown-content a:hover {
@@ -304,6 +305,7 @@ ul li a:hover {
 
 .settings-item {
     border-bottom: 1px solid #d6d4d4;
+    
 }
 
 .light-mode-item {
