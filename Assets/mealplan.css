@@ -254,6 +254,7 @@
     margin-top: 20px;
     margin-left:  10px;
     margin-right:  10px;
+    border: 1px solid #2DA44E;
     background-color: #2DA44E;
     color: #fff;
     border: none;
@@ -264,18 +265,41 @@
     border-radius: 30px;
     padding: 5px 14px;
 }
-.About-headings-1 button:hover{
-     box-shadow: 0px 0px 5px #2DA44E;
+
+.About-headings-1 button:last-child{
+    box-shadow: 0px 0px 5px #2DA44E;
     border: 1px solid #2DA44E;
     background-color: #fff;
     color: #2DA44E;
 }
-.About-headings-1 button:focus{
+.About-headings-1 button last-child:focus{
+    box-shadow: 0px 0px 5px #2DA44E;
+    border: 1px solid #2DA44E;
+    background-color: #2DA44E;
+    color: #fff;
+}
+/* .About-headings-1 button:hover{
+    box-shadow: 0px 0px 5px #2DA44E;
+    border: 1px solid #2DA44E;
+    background-color: #2DA44E;
+    color: #fff;
+}
+.About-headings-1 button:active{
      box-shadow: 0px 0px 5px #2DA44E;
+    border: 1px solid #2DA44E;
+    background-color: #2DA44E;
+    color: #fff;
+}
+.About-headings-1 button:first-child{
+    outline: #2DA44E;
+    box-shadow: 0px 0px 5px #2DA44E;
+}
+.About-headings-1 button:last-child{
+    box-shadow: 0px 0px 5px #2DA44E;
     border: 1px solid #2DA44E;
     background-color: #fff;
     color: #2DA44E;
-}
+} */
 .about-nutritional-content{
     border: 1px solid #2DA44E;
     border-radius: 10px;
