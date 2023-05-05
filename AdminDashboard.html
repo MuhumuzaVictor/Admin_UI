@@ -123,30 +123,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        const ctx = document.getElementById("myChart");
-
-        new Chart(ctx, {
-            type: "pie",
-            data: {
-                labels: ["Proteins", "Carbohydrates", "Fats", "Vitamins"],
-                datasets: [{
-                    label: "Calories",
-                    data: [60, 112, 120, 400],
-                    backgroundColor: ["#eb966b", "#f6da6a", "#4aad4e", "#d53433"],
-                    borderWidth: 1,
-                }, ],
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                    },
-                },
-            },
-        });
-
-        /* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
+        /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
         function myFunction() {
             document.getElementById("myDropdown").classList.toggle("show");
         }

@@ -43,10 +43,9 @@
         <div class="vertical-line-right"></div>
         <div class="username">SIMON PETER WAKOKO</div>
 
-        <button onclick="myFunction()" class="profile-image"></button>
+        <button onclick="toggleUserMenu()" class="profile-image"></button>
         <div id="myDropdown" class="dropdown-content">
-            <a href="#user_profile" class="user"><i class="fa-regular fa-user" id="user-icon"></i>User profile</a
-        >
+            <a href="#user_profile" class="user"><i class="fa-regular fa-user" id="user-icon"></i>User profile</a>
         <a href="#settings" class="settings-item"
           ><i class="fa-solid fa-gear" id="settings-icon"></i
           ><span class="setting-text">Settings</span>
@@ -96,7 +95,7 @@
                     <button>Sunday</button>
                    
                 </div>
-                <div class="meals-today">
+                            <div class="meals-today">
                     <p>Today's Meals<span>16th April, 2023</span></p>
                     <div class="breakfast" style="border-top: 1px solid #CCCCCC;">
                         <img src="./Assets/breakfast.jpeg">
@@ -146,50 +145,10 @@
         <a href="#"><i class="fa-solid fa-magnifying-glass-chart"></i> </a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        const ctx = document.getElementById("myChart");
 
-        new Chart(ctx, {
-            type: "pie",
-            data: {
-                labels: ["Proteins", "Carbohydrates", "Fats", "Vitamins"],
-                datasets: [{
-                    label: "Calories",
-                    data: [60, 112, 120, 400],
-                    backgroundColor: ["#eb966b", "#f6da6a", "#4aad4e", "#d53433"],
-                    borderWidth: 1,
-                }, ],
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                    },
-                },
-            },
-        });
-
-        /* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(event) {
-            if (!event.target.matches(".profile-image")) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains("show")) {
-                        openDropdown.classList.remove("show");
-                    }
-                }
-            }
-        };
-    </script>
+    <script src="Assets/script.js"></script>
     <script src="dashboard.js"></script>
+
 </body>
 
 </html>
