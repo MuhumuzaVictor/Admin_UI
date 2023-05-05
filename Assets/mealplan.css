@@ -180,13 +180,13 @@
 
 .breakfast-buttons .btn:hover {
     box-shadow: 0px 0px 5px #2DA44E;
-    border: 1px solid #2DA44E;
+    /* border: 1px solid #2DA44E; */
     background-color: #fff;
     color: #2DA44E;
 }
 .breakfast-buttons .btn:active{
     box-shadow: 0px 0px 5px #2DA44E;
-    border: 1px solid #2DA44E;
+    /* border: 1px solid #2DA44E; */
     background-color: #fff;
     color: #2DA44E;
 }
