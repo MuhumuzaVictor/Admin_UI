@@ -163,6 +163,7 @@ main {
     grid-area: content;
     /* height: 100vh; */
     border-right: none;
+    
 }
 
 .fa-house-user {
